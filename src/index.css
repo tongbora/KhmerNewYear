@@ -61,11 +61,6 @@ nav .home-link {
 
 .main-container {
   display: flex;
-  /* grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas:
-    "banner-container content-container"
-    "list-container list-container"; */
   font-family: "Hanuman", serif;
   justify-content: center;
   gap: 20px;
@@ -168,6 +163,7 @@ nav .home-link {
     font-family: "Hanuman", serif;
     justify-content: center;
     align-items: center;
+    margin: 80px 20px;
     gap: 10px;
   }
   .banner-container img {
