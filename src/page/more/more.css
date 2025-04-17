@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: aliceblue;
+  background-image: url("../../../public/img/bg.avif");
+}
+header {
+  font-family: "Koulen", sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+}
+nav {
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0px 50px;
+}
+nav a {
+  color: white;
+  height: 100%;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+}
+.active {
+  color: #f49110;
+}
+nav a:hover {
+  /* background-color: #555; */
+  color: #ff8800;
+}
+nav .home-link {
+  margin-right: auto;
+}
+.links-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+#sidebar-active {
+  display: none;
+}
+.open-sidebar-button,
+.close-sidebar-button {
+  display: none;
+  padding: 0 20px;
+}
+/* end of navbar */
+.main-container {
+  font-family: "Hanuman", serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 20px;
+  margin: 95px 50px;
+}
+h2 {
+  font-family: "Koulen", sans-serif;
+  margin-bottom: 20px;
+  color: #333;
+}
+.main {
+  box-sizing: border-box;
+  border: 2px solid #ff8800;
+  color: #333;
+  line-height: 1.7;
+  padding: 20px;
+  background-color: aliceblue;
+  border-radius: 10px;
+}
+.list {
+  list-style: none;
+}
+@media (max-width: 450px) {
+  .links-container {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 40%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 5;
+    background-color: #333;
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+    transition: 0.5s ease-out;
+  }
+  nav {
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0px;
+  }
+  nav a {
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px 20px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .open-sidebar-button,
+  .close-sidebar-button {
+    padding: 10px;
+    display: block;
+    text-align: center;
+  }
+  #sidebar-active {
+    display: none;
+  }
+  #sidebar-active:checked ~ .links-container {
+    right: 0px;
+    display: flex;
+  }
+  /* end navbar */
+  .main-container {
+    font-family: "Hanuman", serif;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 95px 20px;
+  }
+}
